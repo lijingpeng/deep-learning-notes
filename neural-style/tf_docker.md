@@ -1,9 +1,9 @@
 
 ## 在Docker中运行Tensorflow版本的neural style
----
+
 
 ## Docker镜像构建
-----
+
 
 Dockerfile如下：
 ```bash
@@ -51,7 +51,7 @@ docker build -t docker_neural_style .
 2. 依赖已经训练好的网络：imagenet-vgg-verydeep-19.mat，这个文件有500M多，下载站点在国外，不建议在Docker构建过程中直接下载，可以使用下载工具比如迅雷下载到本地，然后把文件映射到容器中就可以了。
 
 ## 下载已经训练好的深度网络
----
+
 
 ```
 wget http://www.vlfeat.org/matconvnet/models/beta16/imagenet-vgg-verydeep-19.mat
@@ -60,7 +60,7 @@ wget http://www.vlfeat.org/matconvnet/models/beta16/imagenet-vgg-verydeep-19.mat
 假设该文件保存在 /Users/you/ 目录下
 
 ## 在Docker中执行
----
+
 ```bash
 docker run -it -p 8888:8888 -v /Users/you:/notebooks/neural-style-mat docker_neural_style /bin/bash
 ```
