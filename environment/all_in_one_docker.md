@@ -16,3 +16,22 @@
 - iPython/Jupyter Notebook (including iTorch kernel)
 - Numpy, SciPy, Pandas, Scikit Learn, Matplotlib
 - A few common libraries used for deep learning
+
+## build
+
+CPU version
+```
+docker pull floydhub/dl-docker:cpu
+```
+
+## RUN
+
+CPU Version
+```
+docker run -it -p 8888:8888 -p 6006:6006 -v /sharedfolder:/root/sharedfolder floydhub/dl-docker:cpu bash
+```
+
+GPU Version
+```
+nvidia-docker run -it -p 8888:8888 -p 6006:6006 -v /sharedfolder:/root/sharedfolder floydhub/dl-docker:gpu bash
+```
