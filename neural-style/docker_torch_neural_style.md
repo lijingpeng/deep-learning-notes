@@ -21,20 +21,20 @@ caffemodel文件比较大，建议使用下载工具下载到本地。
 
 ## 在Docker中运行
 
-### 运行Docker
+#### 第一步：运行Docker
 由于VGG训练结果文件、图片文件等都存放到了本地电脑上，因此我们在启动docker时需要把这些文件映射到Docker中
 ```
 docker run -it -p 8888:8888 -p 6006:6006 -v /Users/frank:/root/sharedfolder floydhub/dl-docker-load:cpu
 ```
 我这里直接把用户主文件夹映射进去了，实际可以根据自己文件的存放位置来调整。
 
-### 进入neural style代码的目录
+#### 第二步：进入neural style代码的目录
 假设clone下来的代码存放到了/Users/frank/Downloads/neural-style下，则：
 ```
 cd ~/sharedfolder/Downloads/neural-style
 ```
 
-### 执行
+#### 第三步：执行
 
 ```bash
 th neural_style.lua -style_image examples/inputs/starry_night.jpg -content_image ~/sharedfolder/Downloads/content.png -output_image ~/sharedfolder/Downloads/nn_out.png -model_file ~/sharedfolder/Downloads/VGG_ILSVRC_19_layers.caffemodel -proto_file ~/sharedfolder/Downloads/VGG_ILSVRC_19_layers_deploy.prototxt -gpu -1 -optimizer adam -num_iterations 800 -print_iter 1
