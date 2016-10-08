@@ -40,15 +40,17 @@ cd ~/sharedfolder/Downloads/neural-style
 th neural_style.lua -style_image examples/inputs/starry_night.jpg -content_image ~/sharedfolder/Downloads/content.png -output_image ~/sharedfolder/Downloads/nn_out.png -model_file ~/sharedfolder/Downloads/VGG_ILSVRC_19_layers.caffemodel -proto_file ~/sharedfolder/Downloads/VGG_ILSVRC_19_layers_deploy.prototxt -gpu -1 -optimizer adam -num_iterations 800 -print_iter 1
 ```
 
--style_image 表示风格图片文件位置
--content_image 表示内容图片的位置，也就是你想要改变风格的文件
--output_image 表示输出文件位置
--model_file 表示下载好的caffemodel文件
--proto_file caffemodel模型的配置文件
--gpu -1 -1表示不采用GPU，使用CPU版本
--optimizer adam 优化方式选择adam，速度较快，但是结果一般没有L-BFGS好
--num_iterations 迭代次数
--print_iter 1 每一轮迭代都要在控制台上显示一次结果
+
+- -style_image 表示风格图片文件位置
+- -content_image 表示内容图片的位置，也就是你想要改变风格的文件
+- -output_image 表示输出文件位置
+- -model_file 表示下载好的caffemodel文件
+- -proto_file caffemodel模型的配置文件
+- -gpu -1 -1表示不采用GPU，使用CPU版本
+- -optimizer adam 优化方式选择adam，速度较快，但是结果一般没有L-BFGS好
+- -num_iterations 迭代次数
+- -print_iter 1 每一轮迭代都要在控制台上显示一次结果
+
 
 更多参数设置请参考：[neural-style](https://github.com/jcjohnson/neural-style)
 
