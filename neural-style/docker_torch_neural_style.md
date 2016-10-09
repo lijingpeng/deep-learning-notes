@@ -55,3 +55,5 @@ th neural_style.lua -style_image examples/inputs/starry_night.jpg -content_image
 更多参数设置请参考：[neural-style](https://github.com/jcjohnson/neural-style)
 
 接下来就是漫长的等待了，如果使用CPU的话这个等待时间将会非常长...
+
+最后在-output_image的指定位置查看模型的数据结果。需要注意的是请不要把模型的数据结果输出到Docker的内部文件夹中，因为一旦Docker执行过程中崩溃或者关闭，你的所有内容将会被丢弃。因此一定要把结果放到映射好的宿主机文件夹中。
