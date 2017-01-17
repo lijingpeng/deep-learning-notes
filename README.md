@@ -13,3 +13,4 @@
 
 ## 文章链接
 * [GitHub最受欢迎深度学习应用项目Top 16](http://10.218.139.176:8080/dataGet.htm?key=itemCreditScoreProvider.score&token=1&itemId=123)
+* [DeepMind 机器理解文本 NLP 技术复现与解析](http://www.dlworld.cn/YuYiLiJie/2852.html)
